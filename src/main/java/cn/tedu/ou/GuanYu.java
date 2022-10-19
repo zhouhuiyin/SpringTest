@@ -1,6 +1,7 @@
 package cn.tedu.ou;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -11,6 +12,7 @@ public class GuanYu {
     // 运行时会自动从Spring容器中寻找Weapon类型对象来注入依赖
     // 更换依赖对象时,只需要更换保存到Spring容器中的对象即可
     @Autowired
+    @Qualifier("snakeLance")
     private Weapon weapon;
 
     public String getName() {
